@@ -24,5 +24,12 @@ jobs:
 
     - name: Build
       run: |
+        cd server
         npm install
+        psql -U postgres -f database.sql
+        node index.js
+        npm install
+        cd client
+        npm install
+        npm start
         gulp
