@@ -31,6 +31,7 @@ jobs:
         working-directory: client
         run: |
           if [ -f package.json ]; then npm ci || npm install; fi
+          npx browserslist@latest --update-db || true
 
       - name: Build client (if build script exists)
         working-directory: client
