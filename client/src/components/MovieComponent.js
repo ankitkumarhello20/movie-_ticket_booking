@@ -35,7 +35,7 @@ class MovieComponent extends React.Component{
                 <div className="containter">
 
                 
-                <table class="table" style={{backgroundColor:"#F77482" }} >
+                <table className="table" style={{backgroundColor:"#F77482" }} >
  
   <tbody>
     <tr>
@@ -44,9 +44,9 @@ class MovieComponent extends React.Component{
       
       <td style={{fontSize:"20px"}}>{this.props.todo.genre}</td>
       <td style={{fontSize:"20px"}}>{this.props.todo.date}</td>
-      <td><img  width="100px"  height="100px" src={this.props.todo.url}></img></td>
+      <td><img width="100px" height="100px" src={this.props.todo.url} alt={this.props.todo.name || 'Movie poster'} /></td>
 
-      <a class="btn btn-primary" href={URL} role="button" style={{backgroundColor:"#767272"}}>Book Now</a>
+      <a className="btn btn-primary" href={URL} role="button" style={{backgroundColor:"#767272"}}>Book Now</a>
     </tr>
     
     
