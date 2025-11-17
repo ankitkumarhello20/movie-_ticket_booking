@@ -9,7 +9,8 @@ const Movie = () => {
 
   const getMovies = async () => {
     try {
-      const response = await fetch("http://localhost:5000/movies");
+      const base = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      const response = await fetch(`${base}/movies`);
       const jsonData = await response.json();
 
       setMovies(jsonData);

@@ -1,4 +1,5 @@
 import React , {Fragment} from "react"
+import { Link } from 'react-router-dom'
 
 
 // const MovieComponent = (name ) =>
@@ -28,7 +29,8 @@ class MovieComponent extends React.Component{
 
     render(){ 
         
-        var URL=`http://localhost:5000/booking/${this.props.todo.movie_id}`
+        const base = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+        var URL = `/booking/${this.props.todo.movie_id}`;
         console.log("URL" , URL)
 		return( 
 				<Fragment>
@@ -46,7 +48,7 @@ class MovieComponent extends React.Component{
       <td style={{fontSize:"20px"}}>{this.props.todo.date}</td>
       <td><img width="100px" height="100px" src={this.props.todo.url} alt={this.props.todo.name || 'Movie poster'} /></td>
 
-      <a className="btn btn-primary" href={URL} role="button" style={{backgroundColor:"#767272"}}>Book Now</a>
+      <Link className="btn btn-primary" to={URL} role="button" style={{backgroundColor:"#767272"}}>Book Now</Link>
     </tr>
     
     

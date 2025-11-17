@@ -1,0 +1,12 @@
+node_modules
+client/node_modules
+.local
+npm-debug.log
+Dockerfile
+.env
+*.tar.gz
+build
+dist
+.cache
+.git
+.gitignore
